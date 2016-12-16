@@ -1,6 +1,6 @@
 ---
 - name: [Chrony-install] Installation for chronyd
-  packages:
+  package:
     - name: chrony
       state: installed
 
