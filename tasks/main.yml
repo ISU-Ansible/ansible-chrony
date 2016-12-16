@@ -1,20 +1,20 @@
 ---
-  - name: "[Chrony] Installation for chronyd"
-    packages:
-      - name: chrony
-        state: installed
+- name: "[Chrony-install] Installation for chronyd"
+  packages:
+    - name: chrony
+      state: installed
 
-  - name: "[Chrony] Configuration"
-    template:
-      src: "chrony.conf.j2"
-      dest: "{{ chronyd_configuration_file }}"
-      owner: root
-      group: root
-      mode: "0644"
-    notify:
-      - Reload chronyd
+- name: "[Chrony-configure] Configuration"
+  template:
+    src: "chrony.conf.j2"
+    dest: "{{ chronyd_configuration_file }}"
+    owner: root
+    group: root
+    mode: "0644"
+  notify:
+    - Reload chronyd
 
-  - name: "[Chrony] Service start"
-    service:
-      name: chronyd
-      state: started
+- name: "[Chrony-service] Service start"
+  service:
+    name: chronyd
+    state: started
