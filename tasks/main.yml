@@ -1,10 +1,10 @@
 ---
-- name: [Chrony-install] Installation for chronyd
+- name: "[Chrony-install] Installation for chronyd"
   package:
     - name: chrony
       state: installed
 
-- name: [Chrony-configure] Configuration
+- name: "[Chrony-configure] Configuration"
   template:
     src: "chrony.conf.j2"
     dest: "{{ chronyd_configuration_file }}"
@@ -14,7 +14,7 @@
   notify:
     - Reload chronyd
 
-- name: [Chrony-service] Service start
+- name: "[Chrony-service] Service start"
   service:
     name: chronyd
     state: started
