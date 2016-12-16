@@ -1,0 +1,33 @@
+---
+# defaults file for ansible-chrony
+chronyd_configuration_file: /etc/chrony.conf
+
+chronyd_servers:
+  - address: 0.pool.ntp.org
+    type: pool
+    options: offline
+  - address: 1.pool.ntp.org
+    type: pool
+    options: offline
+  - address: 2.pool.ntp.org
+    type: pool
+    options: offline
+  - address: 3.pool.ntp.org
+    type: pool
+    options: offline
+
+chronyd_makestep_offset: 10
+chronyd_makestep_updates: 3
+
+chronyd_driftfile: /var/lib/chrony/drift
+chronyd_stratumweight: "0"
+chronyd_rtcsync: true
+
+chronyd_allow: []
+chronyd_bindcmdaddress: []
+
+chronyd_keyfile: /etc/chrony.keys
+chronyd_logchange: "0.5"
+chronyd_logdir: "/var/log/chrony"
+
+chronyc:

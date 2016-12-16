@@ -1,0 +1,15 @@
+---
+  - name: Reload chronyd
+    service:
+      name: chronyd
+      state: reloaded
+
+  - name: Restart chronyd
+    service:
+      name: chronyd
+      state: restarted
+
+  - name: Start chronyd
+    service:
+      name: chronyd
+      state: started

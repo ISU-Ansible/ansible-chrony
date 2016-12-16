@@ -1,0 +1,51 @@
+{% for s in chronyd_servers %}
+{{ s.type | default("server") }} {{ s.address }} {{ s.options | default("iburst") }}
+{% endfor %}
+
+# Ignore stratum in source selection.
+stratumweight {{chronyd_stratumweight}}
+
+# Record the rate at which the system clock gains/losses time.
+driftfile {{chronyd_driftfile}}
+
+# Enable kernel RTC synchronization.
+{% if chronyd_rtcsync %}rtcsync{% endif %}
+
+# In first three updates step the system clock instead of slew
+# if the adjustment is larger than 10 seconds.
+makestep {{chronyd_makestep_offset}} {{chronyd_makestep_updates}}
+
+# Allow NTP client access from local network.
+#allow 192.168/16
+{% for a in chronyd_allow %}
+allow {{ a }}
+{% endfor %}
+
+# Listen for commands only on localhost.
+{% for b in chronyd_bindcmdaddress %}
+bindcmdaddress {{ b }}
+{% endfor %}
+
+# Serve time even if not synchronized to any NTP server.
+#local stratum 10
+
+keyfile {{ chronyd_keyfile }}
+
+# Specify the key used as password for chronyc.
+commandkey {{ chronyd_commandkey }}
+
+# Generate command key if missing.
+{% if chronyd_generatecommand_key %}
+generatecommandkey
+{% endif %}
+
+# Disable logging of client accesses.
+{% if chronyd_noclientlog %}
+noclientlog
+{% endif %}
+
+# Send a message to syslog if a clock adjustment is larger than 0.5 seconds.
+logchange {{ chronyd_logchange }}
+
+logdir {{ chronyd_logdir }}
+#log measurements statistics tracking
