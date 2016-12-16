@@ -29,5 +29,3 @@ chronyd_bindcmdaddress: []
 chronyd_keyfile: /etc/chrony.keys
 chronyd_logchange: "0.5"
 chronyd_logdir: "/var/log/chrony"
-
-chronyc:
