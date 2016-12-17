@@ -1,8 +1,8 @@
 ---
 - name: "Chrony installation"
   package:
-    - name: chrony
-      state: installed
+    name: chrony
+    state: installed
 
 - name: "Chrony Configuration"
   template:
