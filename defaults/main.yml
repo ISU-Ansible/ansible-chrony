@@ -30,6 +30,8 @@ chronyd_bindcmdaddress:
 chronyd_commandkey: "1"
 chronyd_generatecommandkey: true
 
+chronyd_noclientlog: false
+
 chronyd_keyfile: /etc/chrony.keys
 chronyd_logchange: "0.5"
 chronyd_logdir: "/var/log/chrony"
