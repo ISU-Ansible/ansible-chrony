@@ -35,7 +35,7 @@ keyfile {{ chronyd_keyfile }}
 commandkey {{ chronyd_commandkey }}
 
 # Generate command key if missing.
-{% if chronyd_generatecommand_key %}
+{% if chronyd_generatecommandkey %}
 generatecommandkey
 {% endif %}
 

@@ -23,7 +23,12 @@ chronyd_stratumweight: "0"
 chronyd_rtcsync: true
 
 chronyd_allow: []
-chronyd_bindcmdaddress: []
+chronyd_bindcmdaddress:
+  - "127.0.0.1"
+  - "::1"
+
+chronyd_commandkey: "1"
+chronyd_generatecommandkey: true
 
 chronyd_keyfile: /etc/chrony.keys
 chronyd_logchange: "0.5"
