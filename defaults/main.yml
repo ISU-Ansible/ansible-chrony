@@ -1,5 +1,4 @@
 ---
-# defaults file for ansible-chrony
 chronyd_configuration_file: /etc/chrony.conf
 
 chronyd_servers:

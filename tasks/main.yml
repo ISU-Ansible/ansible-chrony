@@ -12,7 +12,7 @@
     group: root
     mode: "0644"
   notify:
-    - Reload chronyd
+    - Restart chronyd
 
 - name: "Chrony Service start"
   service:
