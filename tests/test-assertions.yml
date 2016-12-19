@@ -20,6 +20,7 @@
       shell: "grep 'noclientlog' {{chronyd_configuration_file}}"
       when: chrony_conf.stat.exists == True
       register: noclientlog_stat
+      ignore_errors: true
 
     - debug:
         var: noclientlog_stat
