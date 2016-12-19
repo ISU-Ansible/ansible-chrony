@@ -1,7 +1,7 @@
-Role Name
-=========
+Chrony
+=======
 
-A brief description of the role goes here.
+[![Build Status](https://travis-ci.org/ISU-Ansible/ansible-chrony.svg?branch=master)](https://travis-ci.org/ISU-Ansible/ansible-chrony)
 
 Requirements
 ------------
@@ -30,7 +30,7 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+GPL2
 
 Author Information
 ------------------
