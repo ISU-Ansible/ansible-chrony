@@ -6,9 +6,11 @@ env:
   - distro: centos7
     init: /usr/lib/systemd/systemd
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
-  - distro: centos6
-    init: /sbin/init
-    run_opts: ""
+  # Chrony does not currently test correctly on centos6 due to an issue
+  #  with an adjtimex() call...
+  #- distro: centos6
+  #  init: /sbin/init
+  #  run_opts: ""
 
 # Tell Travis to start Docker when it brings up an environment.
 services:

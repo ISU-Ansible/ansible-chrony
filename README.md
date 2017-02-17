@@ -2,13 +2,76 @@ Chrony
 =======
 [![Build Status](https://travis-ci.org/ISU-Ansible/ansible-chrony.svg?branch=master)](https://travis-ci.org/ISU-Ansible/ansible-chrony)
 
+Note, this role is meant to install and configure the chronyd service on an Enterprise Linux system. This role should function on EL 6, EL 7, and Fedora systems.
+
 Requirements
 ------------
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+No requirements
 
 Role Variables
 --------------
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+
+* **chronyd_configuration_file**: /etc/chrony.conf
+* **chronyd_servers**: This option expects a list of the following attributes.
+  * **address**: address of server
+  * **type**: server or pool
+  * **options**: other options for the server
+* **chronyd_makestep_offset**: 10
+* **chronyd_makestep_updates**: 3
+* **chronyd_driftfile**: /var/lib/chrony/drift
+* **chronyd_stratumweight**: "0"
+* **chronyd_rtcsync**: true
+* **chronyd_allow**: []. Note that this option will accept a list.
+* **chronyd_bindcmdaddress**: Note that this option will accept a list of values
+  - "127.0.0.1"
+  - "::1"
+* **chronyd_commandkey**: "1"
+* **chronyd_generatecommandkey**: true
+* **chronyd_noclientlog**: false
+* **chronyd_keyfile**: /etc/chrony.keys
+* **chronyd_logchange**: "0.5"
+* **chronyd_logdir**: "/var/log/chrony"
+
+Defaults
+--------
+```
+chronyd_configuration_file: /etc/chrony.conf
+
+chronyd_servers:
+  - address: 0.pool.ntp.org
+    type: pool
+    options: offline
+  - address: 1.pool.ntp.org
+    type: pool
+    options: offline
+  - address: 2.pool.ntp.org
+    type: pool
+    options: offline
+  - address: 3.pool.ntp.org
+    type: pool
+    options: offline
+
+chronyd_makestep_offset: 10
+chronyd_makestep_updates: 3
+
+chronyd_driftfile: /var/lib/chrony/drift
+chronyd_stratumweight: "0"
+chronyd_rtcsync: true
+
+chronyd_allow: []
+chronyd_bindcmdaddress:
+  - "127.0.0.1"
+  - "::1"
+
+chronyd_commandkey: "1"
+chronyd_generatecommandkey: true
+
+chronyd_noclientlog: false
+
+chronyd_keyfile: /etc/chrony.keys
+chronyd_logchange: "0.5"
+chronyd_logdir: "/var/log/chrony"
+```
 
 Dependencies
 ------------
@@ -16,11 +79,9 @@ No dependencies.
 
 Example Playbook
 ----------------
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
+    - hosts: systems
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: ISU-Ansible.chrony }
 
 License
 -------
