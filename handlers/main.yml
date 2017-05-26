@@ -3,13 +3,16 @@
     service:
       name: "{{ chrony_service }}"
       state: reloaded
+    when: chrony_manage_service
 
   - name: Restart chrony
     service:
       name: "{{ chrony_service }}"
       state: restarted
+    when: chrony_manage_service
 
   - name: Start chrony
     service:
       name: "{{ chrony_service }}"
       state: started
+    when: chrony_manage_service
