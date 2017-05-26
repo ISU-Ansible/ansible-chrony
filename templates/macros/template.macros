@@ -5,7 +5,7 @@
 {%   elif chrony[key] is defined %}
 {%     set value = chrony[key] %}
 {%   elif chrony_defaults[key] is defined and chrony_skip_defaults != true %}
-{%     set value = opensshd_defaults[key] %}
+{%     set value = chrony_defaults[key] %}
 {%   endif %}
 {{ render_option(key,value) -}}
 {%- endmacro %}

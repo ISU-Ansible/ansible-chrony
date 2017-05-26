@@ -214,7 +214,6 @@ galaxy_info:
 
   galaxy_tags:
     - system
-    - chronyd
     - chrony
     - ntp
     # List tags for your role here, one per line. A tag is
