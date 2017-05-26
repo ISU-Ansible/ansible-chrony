@@ -22,8 +22,15 @@
       register: noclientlog_stat
       ignore_errors: true
 
+    - name: "[Test] Checking configuration file"
+      shell: "cat {{ chrony_configuration_file }}"
+      register: stuff
+
     - debug:
         var: noclientlog_stat
+
+    - debug:
+        var: stuff
 
     - assert:
         that:
