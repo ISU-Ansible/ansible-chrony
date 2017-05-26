@@ -1,15 +1,15 @@
 ---
-  - name: Reload chronyd
+  - name: Reload chrony
     service:
-      name: chronyd
+      name: "{{ chrony_service }}"
       state: reloaded
 
-  - name: Restart chronyd
+  - name: Restart chrony
     service:
-      name: chronyd
+      name: "{{ chrony_service }}"
       state: restarted
 
-  - name: Start chronyd
+  - name: Start chrony
     service:
-      name: chronyd
+      name: "{{ chrony_service }}"
       state: started

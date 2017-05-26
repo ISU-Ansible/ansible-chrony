@@ -1,3 +1,45 @@
 ---
-chronyd_skip_defaults: false
-chronyd_configuration_file: /etc/chrony.conf
+#
+# This variable enables chrony. By default, it is set to true. If you are
+# running this role, you probably want it to be installed. If not, then you
+# can override this variable
+#
+chrony_enabled: true
+
+#
+# Check for virtualization types. If we're virtualized (mainly testing), then
+# don't try to manage or reload the service
+#
+chrony_manage_service: "{{ false if ansible_virtualization_type == 'docker' else true }}"
+chrony_allow_reload: "{{ chrony_manage_service }}"
+
+#
+# Should we skil the defaults provided by the operating system? This should
+# typically be set to false. If you are generating a completely independent
+# configuration file, then you should probably set this to try and override
+# the chrony variable below.
+#
+chrony_skip_defaults: false
+
+#
+# By default, we set the os_supported variable to "no". This way, we can
+# override it in the vars defaults files for any OS that we can support with
+# this role.
+#
+chrony_os_supported: no
+
+#
+# Base Configuration options
+#
+chrony_configuration_file: /etc/chrony.conf
+chrony_config_owner: "chrony"
+chrony_config_group: "chrony"
+chrony_config_mode: "0664"
+chrony_service: "chronyd"
+
+#
+# Empty dictionaries to avoid all errors.
+#
+chrony: {}
+chrony_packages: {}
+chrony_defaults: {}

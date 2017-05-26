@@ -4,88 +4,88 @@
 #=====
 
 # Servers
-{{ body_option("server", chronyd_server) -}}
+{{ body_option("server", chrony_server) -}}
 
 
 # Base Options
-{{ body_option("stratumweight", chronyd_stratumweight) -}}
-{{ body_option("driftfile", chronyd_driftfile) -}}
-{{ body_option("rtcsync", chronyd_rtcsync) -}}
-{{ body_option("makestep", chronyd_makestep) -}}
+{{ body_option("stratumweight", chrony_stratumweight) -}}
+{{ body_option("driftfile", chrony_driftfile) -}}
+{{ body_option("rtcsync", chrony_rtcsync) -}}
+{{ body_option("makestep", chrony_makestep) -}}
 
 
 # Networking Options
-{{ body_option("acquisitionport", chronyd_acquisitionport) -}}
-{{ body_option("bindacqaddress", chronyd_bindacqaddress) -}}
-{{ body_option("bindaddress", chronyd_bindaddress) -}}
-{{ body_option("bindcmdaddress", chronyd_bindcmdaddress) -}}
-{{ body_option("broadcast", chronyd_broadcast) -}}
+{{ body_option("acquisitionport", chrony_acquisitionport) -}}
+{{ body_option("bindacqaddress", chrony_bindacqaddress) -}}
+{{ body_option("bindaddress", chrony_bindaddress) -}}
+{{ body_option("bindcmdaddress", chrony_bindcmdaddress) -}}
+{{ body_option("broadcast", chrony_broadcast) -}}
 
 
 # Authorization Options
-{{ body_option("allow", chronyd_allow) -}}
-{{ body_option("deny", chronyd_deny) -}}
+{{ body_option("allow", chrony_allow) -}}
+{{ body_option("deny", chrony_deny) -}}
 
 
 # Local Options
-{{ body_option("local", chronyd_local) -}}
+{{ body_option("local", chrony_local) -}}
 
 
 # Command Options
-{{ body_option("keyfile", chronyd_keyfile) -}}
-{{ body_option("commandkey", chronyd_commandkey) -}}
-{{ body_option("generatecommandkey", chronyd_generatecommandkey) -}}
-{{ body_option("cmdallow", chronyd_cmdallow) -}}
-{{ body_option("cmddeny", chronyd_cmddeny) -}}
-{{ body_option("cmdport", chronyd_cmdport) -}}
+{{ body_option("keyfile", chrony_keyfile) -}}
+{{ body_option("commandkey", chrony_commandkey) -}}
+{{ body_option("generatecommandkey", chrony_generatecommandkey) -}}
+{{ body_option("cmdallow", chrony_cmdallow) -}}
+{{ body_option("cmddeny", chrony_cmddeny) -}}
+{{ body_option("cmdport", chrony_cmdport) -}}
 
 
 # Logging Options
-{{ body_option("log", chronyd_log) -}}
-{{ body_option("logbanner", chronyd_logbanner) -}}
-{{ body_option("logdir", chronyd_logdir) -}}
-{{ body_option("logchange", chronyd_logchange) -}}
-{{ body_option("noclientlog", chronyd_noclientlog) -}}
-{{ body_option("clientloglimit", chronyd_clientloglimit) -}}
+{{ body_option("log", chrony_log) -}}
+{{ body_option("logbanner", chrony_logbanner) -}}
+{{ body_option("logdir", chrony_logdir) -}}
+{{ body_option("logchange", chrony_logchange) -}}
+{{ body_option("noclientlog", chrony_noclientlog) -}}
+{{ body_option("clientloglimit", chrony_clientloglimit) -}}
 
 
 # Real-Time Clock Options
-{{ body_option("refclock", chronyd_refclock) -}}
-{{ body_option("reselectdist", chronyd_reselectdist) -}}
-{{ body_option("rtcautotrim", chronyd_rtcautotrim) -}}
-{{ body_option("rtcdevice", chronyd_rtcdevice) -}}
-{{ body_option("rtcfile", chronyd_rtcfile) -}}
-{{ body_option("rtconutc", chronyd_rtconutc) -}}
-{{ body_option("tempcomp", chronyd_tempcomp) -}}
+{{ body_option("refclock", chrony_refclock) -}}
+{{ body_option("reselectdist", chrony_reselectdist) -}}
+{{ body_option("rtcautotrim", chrony_rtcautotrim) -}}
+{{ body_option("rtcdevice", chrony_rtcdevice) -}}
+{{ body_option("rtcfile", chrony_rtcfile) -}}
+{{ body_option("rtconutc", chrony_rtconutc) -}}
+{{ body_option("tempcomp", chrony_tempcomp) -}}
 
 
 # Other options
-{{ body_option("combinelimit", chronyd_combinelimit) -}}
-{{ body_option("corrtimeratio", chronyd_corrtimeratio) -}}
-{{ body_option("dumpdir", chronyd_dumpdir) -}}
-{{ body_option("dumponexit", chronyd_dumponexit) -}}
-{{ body_option("fallbackdrift", chronyd_fallbackdrift) -}}
-{{ body_option("hwclockfile", chronyd_hwclockfile) -}}
-{{ body_option("initstepslew", chronyd_initstepslew) -}}
-{{ body_option("leapsecmode", chronyd_leapsecmode) -}}
-{{ body_option("leapsectz", chronyd_leapsectz) -}}
-{{ body_option("lock_all", chronyd_lock_all) -}}
-{{ body_option("mailonchange", chronyd_mailonchange) -}}
-{{ body_option("manual", chronyd_manual) -}}
-{{ body_option("maxchange", chronyd_maxchange) -}}
-{{ body_option("maxclockerror", chronyd_maxclockerror) -}}
-{{ body_option("maxsamples", chronyd_maxsamples) -}}
-{{ body_option("maxslewrate", chronyd_maxslewrate) -}}
-{{ body_option("maxupdateskew", chronyd_maxupdateskew) -}}
-{{ body_option("minsamples", chronyd_minsamples) -}}
-{{ body_option("minsources", chronyd_minsources) -}}
-{{ body_option("peer", chronyd_peer) -}}
-{{ body_option("pidfile", chronyd_pidfile) -}}
-{{ body_option("poolport", chronyd_poolport) -}}
-{{ body_option("sched_priority", chronyd_sched_priority) -}}
-{{ body_option("smoothtime", chronyd_smoothtime) -}}
-{{ body_option("user", chronyd_user) -}}
+{{ body_option("combinelimit", chrony_combinelimit) -}}
+{{ body_option("corrtimeratio", chrony_corrtimeratio) -}}
+{{ body_option("dumpdir", chrony_dumpdir) -}}
+{{ body_option("dumponexit", chrony_dumponexit) -}}
+{{ body_option("fallbackdrift", chrony_fallbackdrift) -}}
+{{ body_option("hwclockfile", chrony_hwclockfile) -}}
+{{ body_option("initstepslew", chrony_initstepslew) -}}
+{{ body_option("leapsecmode", chrony_leapsecmode) -}}
+{{ body_option("leapsectz", chrony_leapsectz) -}}
+{{ body_option("lock_all", chrony_lock_all) -}}
+{{ body_option("mailonchange", chrony_mailonchange) -}}
+{{ body_option("manual", chrony_manual) -}}
+{{ body_option("maxchange", chrony_maxchange) -}}
+{{ body_option("maxclockerror", chrony_maxclockerror) -}}
+{{ body_option("maxsamples", chrony_maxsamples) -}}
+{{ body_option("maxslewrate", chrony_maxslewrate) -}}
+{{ body_option("maxupdateskew", chrony_maxupdateskew) -}}
+{{ body_option("minsamples", chrony_minsamples) -}}
+{{ body_option("minsources", chrony_minsources) -}}
+{{ body_option("peer", chrony_peer) -}}
+{{ body_option("pidfile", chrony_pidfile) -}}
+{{ body_option("poolport", chrony_poolport) -}}
+{{ body_option("sched_priority", chrony_sched_priority) -}}
+{{ body_option("smoothtime", chrony_smoothtime) -}}
+{{ body_option("user", chrony_user) -}}
 
 
 # Includes
-{{ body_option("include", chronyd_include) -}}
+{{ body_option("include", chrony_include) -}}

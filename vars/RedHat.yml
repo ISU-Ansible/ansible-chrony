@@ -1,6 +1,19 @@
 ---
-chronyd_packages: []
-chronyd_defaults:
+#
+# Override the default chrony_os_supported variable to yes.
+#
+chrony_os_supported: yes
+
+#
+# List of packages that need to be installed to use chrony.
+#
+chrony_packages:
+  - chrony
+
+#
+# Chrony default configuration from a fresh RHEL installation
+#
+chrony_defaults:
   server:
     - "0.pool.ntp.org offline"
     - "1.pool.ntp.org offline"
@@ -9,14 +22,13 @@ chronyd_defaults:
   makestep: "1.0 3"
   driftfile: ""/var/lib/chrony/drift"
   stratumweight: "0"
-  rtcsync: "true"
+  rtcsync: true
   allow: []
   bindcmdaddress:
     - "127.0.0.1"
     - ""::1"
   commandkey: "1"
-  generatecommandkey: "true"
-  noclientlog: "false"
+  generatecommandkey: true
   keyfile: ""/etc/chrony.keys"
   logchange: "0.5"
   logdir: ""/var/log/chrony"
