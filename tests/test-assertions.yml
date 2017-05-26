@@ -8,16 +8,16 @@
   tasks:
     - name: "[Test] Does Configuration File Exist?"
       stat:
-        path: "{{chronyd_configuration_file}}"
+        path: "{{chrony_configuration_file}}"
       register: chrony_conf
 
     - name: "[Test] Test File Defaults"
-      shell: "grep 'driftfile.*/var/lib/chrony/drift' {{chronyd_configuration_file}}"
+      shell: "grep 'driftfile.*/var/lib/chrony/drift' {{chrony_configuration_file}}"
       when: chrony_conf.stat.exists == True
       register: chrony_conf_contents
 
     - name: "[Test] Absense of 'noclientlog'"
-      shell: "grep 'noclientlog' {{chronyd_configuration_file}}"
+      shell: "grep 'noclientlog' {{chrony_configuration_file}}"
       when: chrony_conf.stat.exists == True
       register: noclientlog_stat
       ignore_errors: true

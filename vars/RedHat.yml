@@ -30,5 +30,6 @@ chrony_defaults:
   commandkey: "1"
   generatecommandkey: true
   keyfile: "/etc/chrony.keys"
+  noclientlog: false
   logchange: "0.5"
   logdir: "/var/log/chrony"
