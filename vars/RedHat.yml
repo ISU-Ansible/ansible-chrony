@@ -26,9 +26,9 @@ chrony_defaults:
   allow: []
   bindcmdaddress:
     - "127.0.0.1"
-    - ""::1"
+    - "::1"
   commandkey: "1"
   generatecommandkey: true
-  keyfile: ""/etc/chrony.keys"
+  keyfile: "/etc/chrony.keys"
   logchange: "0.5"
-  logdir: ""/var/log/chrony"
+  logdir: "/var/log/chrony"
