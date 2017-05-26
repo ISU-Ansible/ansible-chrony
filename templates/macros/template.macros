@@ -2,9 +2,9 @@
 {%   set value = undefined %}
 {%   if override is defined %}
 {%     set value = override %}
-{%   elif chronyd[key] is defined %}
-{%     set value = chronyd[key] %}
-{%   elif chronyd_defaults[key] is defined and chronyd_skip_defaults != true %}
+{%   elif chrony[key] is defined %}
+{%     set value = chrony[key] %}
+{%   elif chrony_defaults[key] is defined and chrony_skip_defaults != true %}
 {%     set value = opensshd_defaults[key] %}
 {%   endif %}
 {{ render_option(key,value) -}}
@@ -13,7 +13,9 @@
 {% macro render_option(key, value, indent=false) -%}
 {%   if value is defined %}
 {%     if indent == true %}  {% endif %}
-{%     if value is string or value is number %}
+{%     if value is sameas true %}
+{{ key }}
+{%     elif value is string or value is number %}
 {{ key }}={{ value }}
 {%     else %}
 {%       for i in value %}
