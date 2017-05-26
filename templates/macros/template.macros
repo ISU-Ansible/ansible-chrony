@@ -15,7 +15,7 @@
 {%     if indent == true %}  {% endif %}
 {%     if value is sameas true %}
 {{ key }}
-{%     elif balue is sameas false %}
+{%     elif value is sameas false %}
 {%     elif value is string or value is number %}
 {{ key }}={{ value }}
 {%     else %}
