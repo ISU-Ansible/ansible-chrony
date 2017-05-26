@@ -40,178 +40,177 @@ galaxy_info:
   #platforms:
   #- name: OpenBSD
   #  versions:
-  #  - all
-  #  - 5.6
-  #  - 5.7
-  #  - 5.8
-  #  - 5.9
-  #  - 6.0
+  #    - all
+  #    - 5.6
+  #    - 5.7
+  #    - 5.8
+  #    - 5.9
+  #    - 6.0
   #- name: Fedora
   #  versions:
-  #  - all
-  #  - 16
-  #  - 17
-  #  - 18
-  #  - 19
-  #  - 20
-  #  - 21
-  #  - 22
-  #  - 23
-  #  - 24
-  #  - 25
+  #    - all
+  #    - 16
+  #    - 17
+  #    - 18
+  #    - 19
+  #    - 20
+  #    - 21
+  #    - 22
+  #    - 23
+  #    - 24
+  #    - 25
   #- name: DellOS
   #  versions:
-  #  - all
-  #  - 10
-  #  - 6
-  #  - 9
+  #    - all
+  #    - 6
+  #    - 9
+  #    - 10
   #- name: MacOSX
   #  versions:
-  #  - all
-  #  - 10.10
-  #  - 10.11
-  #  - 10.12
-  #  - 10.7
-  #  - 10.8
-  #  - 10.9
+  #    - all
+  #    - 10.7
+  #    - 10.8
+  #    - 10.9
+  #    - 10.10
+  #    - 10.11
+  #    - 10.12
   #- name: Synology
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: Junos
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: GenericBSD
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: Void Linux
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: GenericLinux
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: NXOS
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: IOS
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: Amazon
   #  versions:
-  #  - all
-  #  - 2013.03
-  #  - 2013.09
-  #  - 2016.03
-  #  - 2016.09
+  #    - all
+  #    - 2013.03
+  #    - 2013.09
+  #    - 2016.03
+  #    - 2016.09
   #- name: ArchLinux
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: FreeBSD
   #  versions:
-  #  - all
-  #  - 10.0
-  #  - 10.1
-  #  - 10.2
-  #  - 10.3
-  #  - 11.0
-  #  - 8.0
-  #  - 8.1
-  #  - 8.2
-  #  - 8.3
-  #  - 8.4
-  #  - 9.0
-  #  - 9.1
-  #  - 9.1
-  #  - 9.2
-  #  - 9.3
+  #    - all
+  #    - 8.0
+  #    - 8.1
+  #    - 8.2
+  #    - 8.3
+  #    - 8.4
+  #    - 9.0
+  #    - 9.1
+  #    - 9.2
+  #    - 9.3
+  #    - 10.0
+  #    - 10.1
+  #    - 10.2
+  #    - 10.3
+  #    - 11.0
   #- name: Ubuntu
   #  versions:
-  #  - all
-  #  - lucid
-  #  - maverick
-  #  - natty
-  #  - oneiric
-  #  - precise
-  #  - quantal
-  #  - raring
-  #  - saucy
-  #  - trusty
-  #  - utopic
-  #  - vivid
-  #  - wily
-  #  - xenial
-  #  - yakkety
+  #    - all
+  #    - lucid
+  #    - maverick
+  #    - natty
+  #    - oneiric
+  #    - precise
+  #    - quantal
+  #    - raring
+  #    - saucy
+  #    - trusty
+  #    - utopic
+  #    - vivid
+  #    - wily
+  #    - xenial
+  #    - yakkety
   #- name: Debian
   #  versions:
-  #  - all
-  #  - etch
-  #  - jessie
-  #  - lenny
-  #  - sid
-  #  - squeeze
-  #  - stretch
-  #  - wheezy
+  #    - all
+  #    - etch
+  #    - jessie
+  #    - lenny
+  #    - sid
+  #    - squeeze
+  #    - stretch
+  #    - wheezy
   #- name: Alpine
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: EL
   #  versions:
-  #  - all
-  #  - 5
-  #  - 6
-  #  - 7
+  #    - all
+  #    - 5
+  #    - 6
+  #    - 7
   #- name: Windows
   #  versions:
-  #  - all
-  #  - 2012R2
+  #    - all
+  #    - 2012R2
   #- name: SmartOS
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: opensuse
   #  versions:
-  #  - all
-  #  - 12.1
-  #  - 12.2
-  #  - 12.3
-  #  - 13.1
-  #  - 13.2
+  #    - all
+  #    - 12.1
+  #    - 12.2
+  #    - 12.3
+  #    - 13.1
+  #    - 13.2
   #- name: SLES
   #  versions:
-  #  - all
-  #  - 10SP3
-  #  - 10SP4
-  #  - 11
-  #  - 11SP1
-  #  - 11SP2
-  #  - 11SP3
-  #  - 11SP4
-  #  - 12
-  #  - 12SP1
+  #    - all
+  #    - 10SP3
+  #    - 10SP4
+  #    - 11
+  #    - 11SP1
+  #    - 11SP2
+  #    - 11SP3
+  #    - 11SP4
+  #    - 12
+  #    - 12SP1
   #- name: GenericUNIX
   #  versions:
-  #  - all
-  #  - any
+  #    - all
+  #    - any
   #- name: Solaris
   #  versions:
-  #  - all
-  #  - 10
-  #  - 11.0
-  #  - 11.1
-  #  - 11.2
-  #  - 11.3
+  #    - all
+  #    - 10
+  #    - 11.0
+  #    - 11.1
+  #    - 11.2
+  #    - 11.3
   #- name: eos
   #  versions:
-  #  - all
-  #  - Any
+  #    - all
+  #    - any
 
   galaxy_tags:
     - system
