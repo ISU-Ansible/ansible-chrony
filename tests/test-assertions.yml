@@ -20,25 +20,28 @@
       register: chrony_conf
 
     - name: "[Test] Test File Defaults"
-      shell: "grep 'rtcsync.*true' {{ chrony_configuration_file }}"
+      shell: "grep '^rtcsync' {{ chrony_configuration_file }}"
       when: chrony_conf.stat.exists == True
       register: chrony_conf_contents
 
     - name: "[Test] Test template override"
-      shell: "grep 'test.3 offline' {{ chrony_configuration_file }}"
+      shell: "grep '^test.3 offline' {{ chrony_configuration_file }}"
       when: chrony_conf.stat.exists == True
       register: chrony_template_contents
 
     - name: "[Test] Test template override 2"
-      shell: "grep 'driftfile.*tokyo' {{ chrony_configuration_file }}"
+      shell: "grep '^driftfile.*tokyo' {{ chrony_configuration_file }}"
       when: chrony_conf.stat.exists == True
       register: chrony_driftfile_contents
 
     - name: "[Test] Absense of 'noclientlog'"
-      shell: "grep 'noclientlog' {{ chrony_configuration_file }}"
+      shell: "grep '^noclientlog' {{ chrony_configuration_file }}"
       when: chrony_conf.stat.exists == True
       register: noclientlog_stat
       ignore_errors: true
+
+    - debug:
+        var: chrony_conf
 
     - assert:
         that:
