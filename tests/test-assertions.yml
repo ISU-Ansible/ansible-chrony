@@ -25,7 +25,7 @@
       register: chrony_conf_contents
 
     - name: "[Test] Test template override"
-      shell: "grep '^test.3.*offline' {{ chrony_configuration_file }}"
+      shell: "grep '^server.*test\.3.*offline' {{ chrony_configuration_file }}"
       when: chrony_conf.stat.exists == True
       register: chrony_template_contents
 
