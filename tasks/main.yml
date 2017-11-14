@@ -45,7 +45,7 @@
 - name: CHRONY | Service configuration
   service:
     name: "{{ chrony_service }}"
-    state: running
+    state: started
     enabled: true
   when: chrony_manage_service
 
