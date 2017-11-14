@@ -3,7 +3,7 @@
     service:
       name: "{{ chrony_service }}"
       state: restarted
-    when: chrony_manage_service
+    when: chrony_allow_restart
 
   - name: Start chrony
     service:

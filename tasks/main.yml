@@ -18,6 +18,11 @@
   tags:
     - chrony
 
+- name: CHRONY | Set facts for chrony_manage_service and chrony_allow_restart
+  set_fact:
+    chrony_manage_service: "{{ false if ansible_virtualization_type == 'docker' else true }}"
+    chrony_allow_restart: "{{ false if ansible_virtualization_type == 'docker' else true }}"
+
 - name: CHRONY | installation
   package:
     name: "{{ item }}"

@@ -10,8 +10,8 @@ chrony_enabled: true
 # Check for virtualization types. If we're virtualized (mainly testing), then
 # don't try to manage or reload the service
 #
-chrony_manage_service: "{{ false if ansible_virtualization_type == 'docker' else true }}"
-chrony_allow_reload: "{{ chrony_manage_service }}"
+chrony_manage_service: ""
+chrony_allow_restart: ""
 
 #
 # Should we skil the defaults provided by the operating system? This should
