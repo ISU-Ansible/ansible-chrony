@@ -35,7 +35,7 @@
     group: "{{ chrony_config_group }}"
     mode: "{{ chrony_config_mode }}"
   notify:
-    - Reload chrony
+    - Restart chrony
 
 - name: CHRONY | Service configuration
   service:
