@@ -5,33 +5,33 @@
 
 # Servers
 {{- body_option("server", chrony_server) -}}
-
+{{ '' }}
 # Base Options
 {{- body_option("stratumweight", chrony_stratumweight) -}}
 {{- body_option("driftfile", chrony_driftfile) -}}
 {{- body_option("rtcsync", chrony_rtcsync) -}}
 {{- body_option("makestep", chrony_makestep) -}}
-
+{{ '' }}
 # Networking Options
 {{- body_option("acquisitionport", chrony_acquisitionport) -}}
 {{- body_option("bindacqaddress", chrony_bindacqaddress) -}}
 {{- body_option("bindaddress", chrony_bindaddress) -}}
 {{- body_option("bindcmdaddress", chrony_bindcmdaddress) -}}
 {{- body_option("broadcast", chrony_broadcast) -}}
-
+{{ '' }}
 # Authorization Options
 {{- body_option("allow", chrony_allow) -}}
 {{- body_option("deny", chrony_deny) -}}
-
+{{ '' }}
 # Local Options
 {{- body_option("local", chrony_local) -}}
-
+{{ '' }}
 # Command Options
 {{- body_option("keyfile", chrony_keyfile) -}}
 {{- body_option("cmdallow", chrony_cmdallow) -}}
 {{- body_option("cmddeny", chrony_cmddeny) -}}
 {{- body_option("cmdport", chrony_cmdport) -}}
-
+{{ '' }}
 # Logging Options
 {{- body_option("log", chrony_log) -}}
 {{- body_option("logbanner", chrony_logbanner) -}}
@@ -39,7 +39,7 @@
 {{- body_option("logchange", chrony_logchange) -}}
 {{- body_option("noclientlog", chrony_noclientlog) -}}
 {{- body_option("clientloglimit", chrony_clientloglimit) -}}
-
+{{ '' }}
 # Real-Time Clock Options
 {{- body_option("refclock", chrony_refclock) -}}
 {{- body_option("reselectdist", chrony_reselectdist) -}}
@@ -48,7 +48,7 @@
 {{- body_option("rtcfile", chrony_rtcfile) -}}
 {{- body_option("rtconutc", chrony_rtconutc) -}}
 {{- body_option("tempcomp", chrony_tempcomp) -}}
-
+{{ '' }}
 # Other options
 {{- body_option("combinelimit", chrony_combinelimit) -}}
 {{- body_option("corrtimeratio", chrony_corrtimeratio) -}}
@@ -75,6 +75,7 @@
 {{- body_option("sched_priority", chrony_sched_priority) -}}
 {{- body_option("smoothtime", chrony_smoothtime) -}}
 {{- body_option("user", chrony_user) -}}
-
+{{ '' }}
 # Includes
 {{- body_option("include", chrony_include) -}}
+{{ '' }}
