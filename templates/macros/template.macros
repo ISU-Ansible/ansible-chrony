@@ -1,4 +1,4 @@
-{% macro body_option(key,override) -%}
+{%- macro body_option(key,override) %}
 {%   set value = undefined %}
 {%   if override is defined %}
 {%     set value = override %}
@@ -10,7 +10,7 @@
 {{ render_option(key, value) -}}
 {%- endmacro %}
 
-{% macro render_option(key, value, indent=false) -%}
+{%- macro render_option(key, value, indent=false) %}
 {%   if value is defined %}
 {%     if indent == true %}  {% endif %}
 {%     if value is sameas true %}
