@@ -3,11 +3,13 @@
 # {{ ansible_managed }}
 #=====
 {% if true -%} {%- endif %}
+
 #=====
 # Servers
 #=====
 {{ body_option("server", chrony_server) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Base Options
 #=====
@@ -16,6 +18,7 @@
 {{ body_option("rtcsync", chrony_rtcsync) -}}
 {{ body_option("makestep", chrony_makestep) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Networking Options
 #=====
@@ -25,17 +28,20 @@
 {{ body_option("bindcmdaddress", chrony_bindcmdaddress) -}}
 {{ body_option("broadcast", chrony_broadcast) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Authorization Options
 #=====
 {{ body_option("allow", chrony_allow) -}}
 {{ body_option("deny", chrony_deny) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Local Options
 #=====
 {{ body_option("local", chrony_local) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Command Options
 #=====
@@ -44,6 +50,7 @@
 {{ body_option("cmddeny", chrony_cmddeny) -}}
 {{ body_option("cmdport", chrony_cmdport) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Logging Options
 #=====
@@ -54,6 +61,7 @@
 {{ body_option("noclientlog", chrony_noclientlog) -}}
 {{ body_option("clientloglimit", chrony_clientloglimit) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Real-Time Clock Options
 #=====
@@ -65,6 +73,7 @@
 {{ body_option("rtconutc", chrony_rtconutc) -}}
 {{ body_option("tempcomp", chrony_tempcomp) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Other options
 #=====
@@ -94,6 +103,7 @@
 {{ body_option("smoothtime", chrony_smoothtime) -}}
 {{ body_option("user", chrony_user) -}}
 {% if true -%} {%- endif %}
+
 #=====
 # Includes
 #=====
