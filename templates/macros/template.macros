@@ -8,7 +8,7 @@
 {%     set value = chrony_defaults[key] %}
 {%   endif %}
 {{ render_option(key, value) }}
-{%- endmacro %}
+{% endmacro %}
 
 {% macro render_option(key, value, indent=false) -%}
 {%   if value is defined %}
@@ -24,4 +24,4 @@
 {%       endfor %}
 {%     endif %}
 {%   endif %}
-{%- endmacro %}
+{% endmacro %}
