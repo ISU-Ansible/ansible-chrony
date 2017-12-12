@@ -37,6 +37,9 @@ galaxy_info:
       versions:
         - 6
         - 7
+    - name: Fedora
+      versions:
+        - all
   #platforms:
   #- name: OpenBSD
   #  versions:
